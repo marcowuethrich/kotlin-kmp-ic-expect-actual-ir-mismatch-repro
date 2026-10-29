@@ -1,5 +1,7 @@
 # EXPECT_ACTUAL_IR_MISMATCH with incremental compilation of common sources (Kotlin 2.5)
 
+Reported as [KT-90955](https://youtrack.jetbrains.com/issue/KT-90955).
+
 With `kotlin.jvm.enableIncrementalCompilationOfCommonSources=true`, a body-only edit of a common file
 that uses an `object` only as a qualifier (`Holder.name`) makes the next incremental `compileKotlinJvm`
 fail on another member of that object, in a file nobody edited. Every following build fails the same
