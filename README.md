@@ -2,6 +2,9 @@
 
 Reported as [KT-90955](https://youtrack.jetbrains.com/issue/KT-90955).
 
+**Status:** fixed by [JetBrains/kotlin#9403](https://github.com/JetBrains/kotlin/pull/9403), merged into
+Kotlin's master on 2026-11-05 (the 2.5.20 line). Kotlin 2.5.0 does not include the fix.
+
 With `kotlin.jvm.enableIncrementalCompilationOfCommonSources=true`, a body-only edit of a common file
 that uses an `object` only as a qualifier (`Holder.name`) makes the next incremental `compileKotlinJvm`
 fail on another member of that object, in a file nobody edited. Every following build fails the same
